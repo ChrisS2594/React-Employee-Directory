@@ -1,18 +1,14 @@
-import React from 'react';
+import React, {Component} from 'react';
+import Home from "./pages/Home";
 
-function App() {
-  return (
-      <div>
-        <h1 className="display-4 text-center my-3">Employee Tracker</h1>
-        <div className="container">
-            <div className="form">
-                <div className="form-group">
-                    <input type="text" className="form-control" placeholder="Search for employee"/>
-                </div>
+class App extends Component {
+    render(){
+        return(
+            <div className="container">
+                <Home/>
             </div>
-        </div>
-      </div>
-  );
+        )
+    }
 }
 
 export default App;

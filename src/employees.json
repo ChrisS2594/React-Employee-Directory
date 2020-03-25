@@ -1,0 +1,24 @@
+[
+    {
+      "id": 1,
+      "firstName": "SpongeBob",
+      "lastName": "Squarepants",
+      "fullName": "SpongeBob Squarepants",
+      "role": "Fry Cook"
+    },
+    {
+      "id": 2,
+      "firstName": "Squidward",
+      "lastName": "Tentacles",
+      "fullName": "Squidward Tentacles",
+      "role": "Cashier"
+    },
+    {
+      "id": 3,
+      "firstName": "Eugene",
+      "lastName": "Krabs",
+      "fullName": "Eugene Krabs",
+      "role": "Manager"
+    }    
+]
+  
