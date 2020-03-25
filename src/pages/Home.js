@@ -1,38 +1,61 @@
 import React, {Component} from 'react'
-import Header from "../components/Header";
-import Main from "../components/Main";
 import EmployeeDisplay from "../components/EmployeeDisplay";
 import employeeArray from "../employees.json";
 
 class Home extends Component {
     state = {
-        search: ""
+        filter: "",
+        filterBy: "name"
     }
 
-    handleSearchInput = e => {
-        this.setState({search: e.target.value});
+    handleFilterInput = e => {
+        this.setState({filter: e.target.value});
+    }
+
+    handleFilterChange = e => {
+        this.setState({filterBy: e.target.value})
     }
 
     render(){
-        let filteredEmployees = employeeArray.filter(employee => (
-            employee.fullName.toLowerCase().includes(this.state.search.toLowerCase())
-        ))
+        let filteredEmployees;
+
+        if (this.state.filterBy === "name"){
+            filteredEmployees = employeeArray.filter(employee => (
+                employee.name.toLowerCase().includes(this.state.filter.toLowerCase())
+            ));
+        } else if (this.state.filterBy === "role"){
+            filteredEmployees = employeeArray.filter(employee => (
+                employee.role.toLowerCase().includes(this.state.filter.toLowerCase())
+            ));
+        } else if (this.state.filterBy === "type"){
+            filteredEmployees = employeeArray.filter(employee => (
+                employee.type.toLowerCase().includes(this.state.filter.toLowerCase())
+            ));
+        }
 
         return(
             <div className="container">
                 <h1 className="display-4 text-center my-3">Employee Tracker</h1>
-                <div className="form">
-                    <div className="form-group">
+                <div className="form-row">
+                    <div className="form-group col-8">
                         <input
-                        type="text"
-                        className="form-control"
-                        placeholder="Filter by name"
-                        onChange={this.handleSearchInput}
-                        value={this.state.search}/>
-                        <p>Your search: {this.state.search}</p>
+                            type="text"
+                            className="form-control"
+                            placeholder={`Filter by ${this.state.filterBy}`}
+                            onChange={this.handleFilterInput}
+                            value={this.state.filter}
+                        />
                     </div>
-                    <EmployeeDisplay employees={filteredEmployees}/>
+                    <label htmlFor="">Filter by: </label>
+                    <div className="form-group col-3">
+                        <select name="filterBy" className="form-control" onChange={this.handleFilterChange}>
+                            <option value="name">Name</option>
+                            <option value="role">Role</option>
+                            <option value="type">Type</option>
+                        </select>
+                    </div>
                 </div>
+                <EmployeeDisplay employees={filteredEmployees}/>
             </div>
         )
     }

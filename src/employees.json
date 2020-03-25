@@ -1,24 +1,45 @@
 [
     {
       "id": 1,
-      "firstName": "SpongeBob",
-      "lastName": "Squarepants",
-      "fullName": "SpongeBob Squarepants",
-      "role": "Fry Cook"
+      "name": "SpongeBob Squarepants",
+      "role": "Fry Cook",
+      "type": "Sponge"
     },
     {
       "id": 2,
-      "firstName": "Squidward",
-      "lastName": "Tentacles",
-      "fullName": "Squidward Tentacles",
-      "role": "Cashier"
+      "name": "Squidward Tentacles",
+      "role": "Cashier",
+      "type": "Octopus"
     },
     {
       "id": 3,
-      "firstName": "Eugene",
-      "lastName": "Krabs",
-      "fullName": "Eugene Krabs",
-      "role": "Manager"
-    }    
+      "name": "Eugene Krabs",
+      "role": "Manager",
+      "type": "Crab"
+    },
+    {
+      "id": 4,
+      "name": "Sandy Cheeks",
+      "role": "Scientist",
+      "type": "Squirrel"
+    },
+    {
+      "id": 5,
+      "name": "Sheldon Plankton",
+      "role": "Manager",
+      "type": "Plankton"
+    },
+    {
+      "id": 6,
+      "name": "Mrs. Puff",
+      "role": "Teacher",
+      "type": "Pufferfish"
+    },
+    {
+      "id": 7,
+      "name": "Larry the Lobster",
+      "role": "Lifeguard",
+      "type": "Lobster"
+    }
 ]
   

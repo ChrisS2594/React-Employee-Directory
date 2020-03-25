@@ -7,12 +7,14 @@ const EmployeeDisplay = (props) => {
                 <th>#</th>
                 <th>Name</th>
                 <th>Role</th>
+                <th>Type</th>
             </tr>
-            {props.employees.map(e => (
+            {props.employees.map(employee => (
                 <tr>
-                    <th scope="row">{e.id}</th>
-                    <td>{e.fullName}</td>
-                    <td>{e.role}</td>
+                    <th scope="row">{employee.id}</th>
+                    <td>{employee.name}</td>
+                    <td>{employee.role}</td>
+                    <td>{employee.type}</td>
                 </tr>
             ))}
         </table>
