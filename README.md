@@ -1,3 +1,5 @@
+The purpose of this application was to use React make an employee directory viewable to the user, with options to filter each employee by their name, role, and salary. The employees used in this app are taken from an array in the file employees.json, which consists of random employees I made up.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

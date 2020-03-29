@@ -3,43 +3,42 @@
       "id": 1,
       "name": "SpongeBob Squarepants",
       "role": "Fry Cook",
-      "type": "Sponge"
+      "salary": 50000
     },
     {
       "id": 2,
       "name": "Squidward Tentacles",
       "role": "Cashier",
-      "type": "Octopus"
+      "salary": 30000
     },
     {
       "id": 3,
       "name": "Eugene Krabs",
       "role": "Manager",
-      "type": "Crab"
+      "salary": 90000
     },
     {
       "id": 4,
       "name": "Sandy Cheeks",
       "role": "Scientist",
-      "type": "Squirrel"
+      "salary": 120000
     },
     {
       "id": 5,
       "name": "Sheldon Plankton",
       "role": "Manager",
-      "type": "Plankton"
+      "salary": 20000
     },
     {
       "id": 6,
       "name": "Mrs. Puff",
       "role": "Teacher",
-      "type": "Pufferfish"
+      "salary": 25000
     },
     {
       "id": 7,
       "name": "Larry the Lobster",
       "role": "Lifeguard",
-      "type": "Lobster"
+      "salary": 35000
     }
 ]
-  

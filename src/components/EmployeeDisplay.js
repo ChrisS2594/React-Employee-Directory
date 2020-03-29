@@ -7,14 +7,14 @@ const EmployeeDisplay = (props) => {
                 <th>#</th>
                 <th>Name</th>
                 <th>Role</th>
-                <th>Type</th>
+                <th>Salary</th>
             </tr>
             {props.employees.map(employee => (
                 <tr>
                     <th scope="row">{employee.id}</th>
                     <td>{employee.name}</td>
                     <td>{employee.role}</td>
-                    <td>{employee.type}</td>
+                    <td>{employee.salary}</td>
                 </tr>
             ))}
         </table>

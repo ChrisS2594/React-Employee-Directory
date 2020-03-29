@@ -5,7 +5,8 @@ import employeeArray from "../employees.json";
 class Home extends Component {
     state = {
         filter: "",
-        filterBy: "name"
+        filterBy: "name",
+        sortBy: "name"
     }
 
     handleFilterInput = e => {
@@ -13,7 +14,11 @@ class Home extends Component {
     }
 
     handleFilterChange = e => {
-        this.setState({filterBy: e.target.value})
+        this.setState({filterBy: e.target.value});
+    }
+
+    handleSortChange = e => {
+        this.setState({sortBy: e.target.value});
     }
 
     render(){
@@ -27,9 +32,9 @@ class Home extends Component {
             filteredEmployees = employeeArray.filter(employee => (
                 employee.role.toLowerCase().includes(this.state.filter.toLowerCase())
             ));
-        } else if (this.state.filterBy === "type"){
+        } else if (this.state.filterBy === "salary"){
             filteredEmployees = employeeArray.filter(employee => (
-                employee.type.toLowerCase().includes(this.state.filter.toLowerCase())
+                employee.salary.toString().includes(this.state.filter)
             ));
         }
 
@@ -51,7 +56,15 @@ class Home extends Component {
                         <select name="filterBy" className="form-control" onChange={this.handleFilterChange}>
                             <option value="name">Name</option>
                             <option value="role">Role</option>
-                            <option value="type">Type</option>
+                            <option value="salary">Salary</option>
+                        </select>
+                    </div>
+                    <label htmlFor="">Sort by: </label>
+                    <div className="form-group col-3">
+                        <select name="sortBy" className="form-control" onChange={this.handleSortChange}>
+                            <option value="name">Name</option>
+                            <option value="role">Role</option>
+                            <option value="salary">Salary</option>
                         </select>
                     </div>
                 </div>
